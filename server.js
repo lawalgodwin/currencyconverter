@@ -4,7 +4,7 @@ const favicon = require("express-favicon");
 
 const serverStatic = require("serve-static");
 const path = require("path");
-app.use(favicon(path.join(__dirname, "./public/favicon.ico")));
+app.use(favicon(path.join(__dirname, "./dist/favicon.ico")));
 app.use("/", serverStatic(path.join(__dirname, "/dist")));
 
 const port = process.env.PORT;
