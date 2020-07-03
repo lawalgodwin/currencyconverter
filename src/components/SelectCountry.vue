@@ -71,7 +71,7 @@ export default {
   },
   created() {
     this.fetchCoutriesDetails(
-      `${process.env.VUE_APP_BASEURL}list?access_key=${process.env.VUE_APP_APIKEY}`
+      `${process.env.VUE_APP_BASEURL}/list?access_key=${process.env.VUE_APP_APIKEY}`
     );
   },
   updated() {
