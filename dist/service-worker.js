@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.8df431e0389f4336a50044975e069efb.js"
+  "/precache-manifest.368fe7d4e58844f42ef6caf35686a3c4.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "currencyconverter"});
