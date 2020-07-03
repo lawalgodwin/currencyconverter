@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "df64a5d3035fc62c5b7d",
+    "revision": "b9090721a70b69a0455d",
     "url": "/css/app.752a0c5a.css"
   },
   {
@@ -18,12 +18,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/undraw_bear_market_ania.824e22b6.png"
   },
   {
-    "revision": "8276c8a923d6167fb5b412774519c3c0",
+    "revision": "425b8021bc6ab8c63b07639254f99eac",
     "url": "/index.html"
   },
   {
-    "revision": "df64a5d3035fc62c5b7d",
-    "url": "/js/app.89286d40.js"
+    "revision": "b9090721a70b69a0455d",
+    "url": "/js/app.6431e70f.js"
   },
   {
     "revision": "1ff9e01fd256bc584bd9",
