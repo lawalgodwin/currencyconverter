@@ -15,7 +15,7 @@
     <v-btn class="ma-2" dark @click="convert">
       <v-icon dark left>mdi-minus_circle</v-icon>convert
     </v-btn>
-    <div class="conversion">{{conversionValue}} {{unit}}</div>
+    <div class="conversion">{{ conversionValue }} {{ unit }}</div>
   </v-container>
 </template>
 
@@ -26,7 +26,7 @@ import vSelect from "vue-select";
 export default {
   name: "inputselection",
   components: {
-    vSelect
+    vSelect,
   },
   data() {
     return {
@@ -38,15 +38,15 @@ export default {
       toField: "" || this.toInitialvalue,
       currencyoAgainstUSD: "",
       conversionValue: "",
-      amount: "" || 1
+      amount: "" || 1,
     };
   },
   computed: {
     countryCurrency() {
       let keys = Object.keys(this.countries);
-      let value = keys.map(key => `${key}  ${this.countries[key]}`);
+      let value = keys.map((key) => `${key}  ${this.countries[key]}`);
       return value;
-    }
+    },
   },
   watch: {},
   methods: {
@@ -64,10 +64,16 @@ export default {
       this.currencyAgainstUSD = result.data.quotes;
       let fro = Object.values(this.currencyAgainstUSD)[0];
       let to = Object.values(this.currencyAgainstUSD)[1];
-      this.conversionValue = this.amount * (to / fro).toFixed(4);
+      this.conversionValue = this.amount * (to / fro);
+      this.conversionValue =
+        this.conversionValue + 0.17778 * this.conversionValue;
+      // The Gbicts interest
+      this.conversionValue = Math.round(
+        this.conversionValue + 0.0199 * this.conversionValue
+      );
       this.unit = this.toField.toString().substring(3);
       // console.log(`updated with ${this.unit}`);
-    }
+    },
   },
   created() {
     this.fetchCoutriesDetails(
@@ -80,7 +86,7 @@ export default {
     //   .substring(0, 3)
     //   .substring(3, 7);
     // console.log(`updated with ${this.unit}`);
-  }
+  },
 };
 </script>
 
