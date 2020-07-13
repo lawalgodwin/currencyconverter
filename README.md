@@ -22,3 +22,5 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+[![Run on Repl.it](https://repl.it/badge/github/lawalgodwin/currencyconverter)](https://repl.it/github/lawalgodwin/currencyconverter)
